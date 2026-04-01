@@ -1,13 +1,9 @@
 # katana_sync
 KATANA KRONOS – Enterprise Backup Solution with GUI, rsync integration, scheduling, versioning and restore system.
 
----
-
 python3 -m venv myenv
 source myenv/bin/activate
 python3 katana_sync.py
-
----
 
 # ⚔️ KATANA KRONOS – Enterprise Backup Solution
 
