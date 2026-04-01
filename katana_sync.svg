@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0b0b0b"/>
+    </radialGradient>
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#cccccc"/>
+      <stop offset="100%" stop-color="#888888"/>
+    </linearGradient>
+    <linearGradient id="guardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d32f2f"/>
+      <stop offset="100%" stop-color="#7f0000"/>
+    </linearGradient>
+    <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333"/>
+      <stop offset="100%" stop-color="#111"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#d32f2f" flood-opacity="0.6" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="62" fill="url(#bgGrad)" stroke="#d32f2f" stroke-width="2"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="64" y1="10" x2="64" y2="118" stroke="#d32f2f" stroke-width="0.3" opacity="0.2"/>
+  <line x1="10" y1="64" x2="118" y2="64" stroke="#d32f2f" stroke-width="0.3" opacity="0.2"/>
+
+  <!-- Katana blade (diagonal, tip top-right) -->
+  <!-- Blade body -->
+  <polygon points="98,18 103,23 38,100 30,98" fill="url(#bladeGrad)" filter="url(#glow)"/>
+  <!-- Blade edge highlight -->
+  <line x1="100" y1="20" x2="34" y2="99" stroke="white" stroke-width="0.8" opacity="0.6"/>
+
+  <!-- Blood groove (hi) -->
+  <line x1="95" y1="25" x2="40" y2="95" stroke="#aaa" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Tsuba (guard) - red diamond -->
+  <rect x="26" y="92" width="16" height="16" rx="2"
+        transform="rotate(-45 34 100)"
+        fill="url(#guardGrad)" filter="url(#redGlow)"/>
+
+  <!-- Handle (tsuka) -->
+  <rect x="14" y="96" width="28" height="10" rx="3"
+        transform="rotate(-45 28 101)"
+        fill="url(#handleGrad)" stroke="#444" stroke-width="0.5"/>
+
+  <!-- Handle wrap (ito) -->
+  <line x1="22" y1="114" x2="30" y2="106" stroke="#d32f2f" stroke-width="1.5" opacity="0.8"/>
+  <line x1="18" y1="110" x2="26" y2="102" stroke="#d32f2f" stroke-width="1.5" opacity="0.8"/>
+  <line x1="26" y1="118" x2="34" y2="110" stroke="#d32f2f" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Pommel (kashira) -->
+  <circle cx="15" cy="117" r="4" fill="#222" stroke="#d32f2f" stroke-width="1"/>
+
+  <!-- K letter mark top-left -->
+  <text x="10" y="26" font-family="Impact, sans-serif" font-size="14"
+        fill="#d32f2f" opacity="0.9" filter="url(#redGlow)">K</text>
+</svg>
