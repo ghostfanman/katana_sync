@@ -1,5 +1,5 @@
 
-
+Terminal im Ordner starten, in dem das Programm liegt.
 
 python3 -m venv myenv
 
