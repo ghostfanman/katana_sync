@@ -1,10 +1,6 @@
 # katana_sync
 KATANA KRONOS – Enterprise Backup Solution with GUI, rsync integration, scheduling, versioning and restore system.
 
-python3 -m venv myenv
-source myenv/bin/activate
-python3 katana_sync.py
-
 # ⚔️ KATANA KRONOS – Enterprise Backup Solution
 
 **Katana Kronos** (Version 7.1) ist eine leistungsstarke und einfach zu bedienende Backup-Software für Linux-Systeme. Sie kombiniert die Zuverlässigkeit des Profi-Werkzeugs `rsync` mit einer modernen, dunklen Benutzeroberfläche.
